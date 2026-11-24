@@ -496,7 +496,7 @@ function holsOf(k) { return (JHOL[k] || []).slice().sort((a, b) => HPRI[a[1]] - 
 function noWork(k) { const h = holsOf(k).filter(x => x[1] === "y"); return h.length ? "Yom Tov: " + h.map(x => x[0]).join(", ") : parse(k).getDay() === 6 ? "Shabbos" : ""; }
 // On the GitHub Pages copy (*.github.io) the access key comes from the link (?k=...) and the data from the Cloudflare worker; the key is never in the code.
 const GH_PAGES = /\.github\.io$/.test(location.hostname), GH_KEY = new URLSearchParams(location.search).get("k") || "";
-const API = GH_PAGES ? "https://desk.daybook-amy.workers.dev/c/" + encodeURIComponent(GH_KEY) + "/api/" : location.pathname.replace(/\/?$/, "/") + "api/";
+const API = GH_PAGES ? "https://aidy.daybook-amy.workers.dev/c/" + encodeURIComponent(GH_KEY) + "/api/" : location.pathname.replace(/\/?$/, "/") + "api/";
 if (GH_PAGES && !GH_KEY) document.addEventListener("DOMContentLoaded", () => { document.body.innerHTML = '<p style="font:18px system-ui;padding:24px">This link is missing its key. Please open the full link you were sent.</p>'; });
 const $ = id => document.getElementById(id);
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];

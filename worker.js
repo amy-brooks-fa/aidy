@@ -34,7 +34,7 @@ async function setClientRate(env, name, rate) {
     .bind(key(name), name, rate, new Date().toISOString()).run();
 }
 
-// The GitHub Pages copy of the page (https://amy-brooks-fa.github.io/daybook-desk/?k=<KEY>) calls this API from another origin.
+// The GitHub Pages copy of the page (https://amy-brooks-fa.github.io/aidy/?k=<KEY>) calls this API from another origin.
 const CORS_ORIGINS = ["https://amy-brooks-fa.github.io"];
 
 export default {
